@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int F,C;
+    cout<<"Enter the Celsius:-";
+    cin>>C;
+     F=9*(C/5)+32;
+    cout<<"temperature in Fahrenheit:-"<<F;
+    return 0;
+}
