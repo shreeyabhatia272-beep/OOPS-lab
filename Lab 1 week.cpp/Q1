@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main(){
+cout<< "hello world";
+cout << "hello\n world ";
+cout << "Hello \t World";
+cout << "Triggering alert sound... \a"<< endl;
+cout << "Hello\r Hi";
+cout << "Hello " << endl<< "world "<< endl;
+return 0;
+}
