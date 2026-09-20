@@ -8,8 +8,8 @@ int rollNo;
 public:
 Student()
 {
-name = "Sakshi";
-rollNo = 102;
+name = "Shreeya";
+rollNo = 111;
 }
 void display()
 {
