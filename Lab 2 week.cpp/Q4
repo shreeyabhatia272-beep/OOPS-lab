@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+class Box
+{
+    int length, width, height;
+
+public:
+    // default constructor
+    Box()
+    {
+        length = 0;
+        width = 0;
+        height = 0;
+    }
+
+    // parameterized constructor
+    Box(int l, int w, int h)
+    {
+        length = l;
+        width = w;
+        height = h;
+    }
+
+    void volume()
+    {
+        int v = length * width * height;
+        cout << "Volume of box = " << v << endl;
+    }
+};
+
+int main()
+{
+    int l, w, h;
+
+    cout << "Enter length: ";
+    cin >> l;
+
+    cout << "Enter width: ";
+    cin >> w;
+
+    cout << "Enter height: ";
+    cin >> h;
+
+    Box b1;          // default constructor
+    Box b2(l, w, h); // parameterized constructor
+
+    cout << "Using parameterized constructor volume :" << endl;
+    b2.volume();
+
+    return 0;
+}
