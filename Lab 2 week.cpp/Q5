@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+    string name;
+    int roll;
+    float cgpa;
+
+public:
+    // default constructor
+    Student()
+    {
+        name = "Unknown";
+        roll = 0;
+        cgpa = 0;
+    }
+
+    // constructor with name and roll number
+    Student(string n, int r)
+    {
+        name = n;
+        roll = r;
+        cgpa = 0;
+    }
+
+    // constructor with name, roll number and CGPA
+    Student(string n, int r, float c)
+    {
+        name = n;
+        roll = r;
+        cgpa = c;
+    }
+
+    void display()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Roll Number: " << roll << endl;
+        cout << "CGPA: " << cgpa << endl;
+        cout << endl;
+    }
+};
+
+int main()
+{
+    string name;
+    int roll;
+    float cgpa;
+
+    cout << "Enter name: ";
+    cin >> name;
+
+    cout << "Enter roll number: ";
+    cin >> roll;
+
+    cout << "Enter CGPA: ";
+    cin >> cgpa;
+
+    Student s1;                   
+    Student s2(name, roll);       
+    Student s3(name, roll, cgpa);  
+
+    cout << "\nStudent 1:" << endl;
+    s1.display();
+
+    cout << "Student 2:" << endl;
+    s2.display();
+
+    cout << "Student 3:" << endl;
+    s3.display();
+
+    return 0;
+}
