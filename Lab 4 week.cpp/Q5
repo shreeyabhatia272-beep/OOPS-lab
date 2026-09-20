@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class College {
+protected:
+string collegeName;
+public:
+College(string c) {
+collegeName = c;
+cout << "College constructor\n";
+}
+};
+class Department : public College {
+string departmentName;
+public:
+Department(string c, string d) : College(c) {
+departmentName = d;
+cout << "Department constructor\n";
+}
+void display() {
+cout << collegeName << "\n"
+<< departmentName;
+}
+};
+int main() {
+Department d("Thapar University", "Computer Science");
+d.display();
+return 0;
+}
