@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+protected:
+    string name;
+};
+class Employee : public Person {
+protected:
+    int employeeID;
+};
+class Manager : public Employee {
+    string department;
+public:
+    void input() {
+        cout << "Enter Name: ";
+        getline(cin >> ws, name);         
+        cout << "Enter Employee ID: ";
+        cin >> employeeID;        
+        cout << "Enter Department: ";
+        getline(cin >> ws, department);
+    }
+
+    void display() {
+        cout << "\n--- Manager Details ---\n";
+        cout << "Name: " << name << "\n"
+             << "ID: " << employeeID << "\n"
+             << "Department: " << department << endl;
+    }
+};
+
+int main() {
+    Manager m;
+    m.input();
+    m.display();
+    return 0;
+}
