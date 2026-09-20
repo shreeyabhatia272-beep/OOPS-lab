@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Academic {
+protected:
+    int marks;
+public:
+    Academic() : marks(0) {} 
+    void getAcademic() {
+        cout << "Enter Academic Marks: ";
+        cin >> marks;
+    }
+};
+
+class Sports {
+protected:
+    int sportsScore;
+public:
+    Sports() : sportsScore(0) {} 
+    void getSports() {
+        cout << "Enter Sports Score: ";
+        cin >> sportsScore;
+    }
+};
+class Result : public Academic, public Sports {
+public:
+    void display() {
+        cout << "Total Score = " << marks + sportsScore << endl;
+    }
+};
+
+int main() {
+    Result r;
+    r.getAcademic();
+    r.getSports();
+    r.display();
+    return 0;
+}
