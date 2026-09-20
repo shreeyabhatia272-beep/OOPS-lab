@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+class Complex
+{
+    int real, imaginary;
+
+public:
+    // Default constructor
+    Complex()
+    {
+        real = 0;
+        imaginary = 0;
+    }
+
+    // Parameterized constructor
+    Complex(int r, int i)
+    {
+        real = r;
+        imaginary = i;
+    }
+
+    // Display function
+    void display()
+    {
+        cout << real << " + " << imaginary << "i" << endl;
+    }
+};
+
+int main()
+{
+    int r, i;
+
+    cout << "Enter real part: ";
+    cin >> r;
+
+    cout << "Enter imaginary part: ";
+    cin >> i;
+
+    Complex c1;       // default constructor
+    Complex c2(r, i); // parameterized constructor
+
+    cout << "Using default constructor: ";
+    c1.display();
+
+    cout << "Using parameterized constructor: ";
+    c2.display();
+
+    return 0;
+}
