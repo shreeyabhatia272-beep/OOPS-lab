@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Print
+{
+public:
+    void display(int a)
+    {
+        cout << "Integer value: " << a << endl;
+    }
+
+    void display(double b)
+    {
+        cout << "Double value: " << b << endl;
+    }
+
+    void display(string c)
+    {
+        cout << "String value: " << c << endl;
+    }
+};
+
+int main()
+{
+    Print p;
+
+    p.display(10);
+    p.display(12.5);
+    p.display(string("Hello World"));
+
+    return 0;
+}
