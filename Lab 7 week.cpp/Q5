@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    virtual void displayInfo() {
+        cout << "Vehicle Information" << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void displayInfo() {
+        cout << "Vehicle: Car" << endl;
+        cout << "Wheels: 4" << endl;
+    }
+};
+
+class Bike : public Vehicle {
+public:
+    void displayInfo() {
+        cout << "Vehicle: Bike" << endl;
+        cout << "Wheels: 2" << endl;
+    }
+};
+
+class Bus : public Vehicle {
+public:
+    void displayInfo() {
+        cout << "Vehicle: Bus" << endl;
+        cout << "Wheels: 6" << endl;
+    }
+};
+
+int main() {
+    Vehicle *ptr;
+
+    Car c;
+    Bike b;
+    Bus bus;
+
+    ptr = &c;
+    ptr->displayInfo();
+
+    ptr = &b;
+    ptr->displayInfo();
+
+    ptr = &bus;
+    ptr->displayInfo();
+
+    return 0;
+}
