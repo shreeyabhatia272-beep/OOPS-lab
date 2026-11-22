@@ -1,0 +1,48 @@
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+int main()
+{
+    map<int, string> students;
+    int n, roll, searchRoll;
+    string name;
+
+    cout << "Enter number of students: ";
+    cin >> n;
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << "Enter roll number: ";
+        cin >> roll;
+
+        cout << "Enter student name: ";
+        cin >> name;
+
+        students[roll] = name;
+    }
+
+    cout << "\nAll Student Records:\n";
+
+    for(auto x : students)
+    {
+        cout << "Roll No: " << x.first
+             << " Name: " << x.second << endl;
+    }
+
+    cout << "\nEnter roll number to search: ";
+    cin >> searchRoll;
+
+    if(students.find(searchRoll) != students.end())
+    {
+        cout << "Student Found: "
+             << students[searchRoll];
+    }
+    else
+    {
+        cout << "Student Not Found!";
+    }
+
+    return 0;
+}
