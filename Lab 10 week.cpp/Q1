@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> v;
+    int n, sum = 0;
+
+    cout << "Enter 5 integers: ";
+
+    for(int i = 0; i < 5; i++)
+    {
+        cin >> n;
+        v.push_back(n);
+    }
+
+    cout << "\nVector elements are: ";
+
+    for(int x : v)
+    {
+        cout << x << " ";
+        sum += x;
+    }
+
+    cout << "\nSum of elements = " << sum;
+
+    return 0;
+}
