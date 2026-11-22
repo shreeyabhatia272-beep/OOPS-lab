@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Calculator
+{
+    T a, b;
+
+public:
+    Calculator(T x, T y)
+    {
+        a = x;
+        b = y;
+    }
+
+    void addition()
+    {
+        cout << "Addition: " << a + b << endl;
+    }
+
+    void subtraction()
+    {
+        cout << "Subtraction: " << a - b << endl;
+    }
+
+    void multiplication()
+    {
+        cout << "Multiplication: " << a * b << endl;
+    }
+
+    void division()
+    {
+        if (b != 0)
+            cout << "Division: "
+                 << (double)a / b << endl;
+        else
+            cout << "Division not possible";
+    }
+};
+
+int main()
+{
+    Calculator<int> c(20, 10);
+
+    c.addition();
+    c.subtraction();
+    c.multiplication();
+    c.division();
+
+    return 0;
+}
