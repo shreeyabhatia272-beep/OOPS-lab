@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stack>
+#include <queue>
+using namespace std;
+
+int main()
+{
+    stack<int> s;
+
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout << "Stack top element: " << s.top();
+
+    s.pop();
+
+    cout << "\nAfter pop, stack top: " << s.top();
+
+    queue<int> q;
+
+    q.push(100);
+    q.push(200);
+    q.push(300);
+
+    cout << "\n\nQueue front element: " << q.front();
+
+    q.pop();
+
+    cout << "\nAfter pop, queue front: " << q.front();
+
+    return 0;
+}
