@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    vector<int> v = {50, 20, 40, 10, 30};
+
+    sort(v.begin(), v.end());
+
+    cout << "Sorted elements: ";
+
+    for(int x : v)
+        cout << x << " ";
+
+    int key;
+    cout << "\nEnter value to search: ";
+    cin >> key;
+
+    if(binary_search(v.begin(), v.end(), key))
+        cout << "Element found!";
+    else
+        cout << "Element not found!";
+
+    return 0;
+}
